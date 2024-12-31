@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "userUid": "DWLnH3o27OUFhwvcoLEYXTG8Qsk2",
+      "email": "acode@example.com",
+      "displayName": "acode",
+      "photoURL": "https://www.example.com/photo.jpg",
+      "createdAt": "2023-01-10T10:00:00Z",
+      "lastLogin": "2023-01-15T12:00:00Z"
+    },
+    {
+      "userUid": "FDSj93kd4vJ4yTlhD0NKM9sF9lQ2",
+      "email": "developer123@example.com",
+      "displayName": "developer123",
+      "photoURL": "https://www.example.com/photo2.jpg",
+      "createdAt": "2023-01-12T14:00:00Z",
+      "lastLogin": "2023-01-20T16:00:00Z"
+    },
+    {
+      "userUid": "aDRfP8j9XYz5wMwDqO2fHt0a1wLn",
+      "email": "cryptoGuru@example.com",
+      "displayName": "cryptoGuru",
+      "photoURL": "https://www.example.com/photo3.jpg",
+      "createdAt": "2023-01-14T08:30:00Z",
+      "lastLogin": "2023-01-25T09:45:00Z"
+    }
+  ],
+  "contents": [
+    {
+      "id": 1,
+      "title": "Exploring the World of Flutter Widgets",
+      "createdAt": "Jan 12 - 8 min read",
+      "thumbnail": "https://www.computerhope.com/jargon/p/program.png",
+      "category": "coding",
+      "authorUid": "DWLnH3o27OUFhwvcoLEYXTG8Qsk2"
+    },
+    {
+      "id": 2,
+      "title": "How to Build a Responsive UI in Flutter",
+      "createdAt": "Jan 15 - 5 min read",
+      "thumbnail": "https://cdn0-production-images-kly.akamaized.net/bzky3jYn9h2VeCewid1oc-fJJ-s=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2962989/original/075702800_1573353762-20190326113607-Digital-Options-With-Olymp-Trade-Online-Trading-Made-Simple-2-4000pxW-X-2670pxH.jpeg",
+      "category": "trading",
+      "authorUid": "DWLnH3o27OUFhwvcoLEYXTG8Qsk2"
+    },
+    {
+      "id": 3,
+      "title": "State Management Simplified with Provider",
+      "createdAt": "Jan 18 - 10 min read",
+      "thumbnail": "https://codingweek.org/wp-content/uploads/2019/08/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg",
+      "category": "coding",
+      "authorUid": "FDSj93kd4vJ4yTlhD0NKM9sF9lQ2"
+    },
+    {
+      "id": 4,
+      "title": "Understanding Flutter Animations for Beginners",
+      "createdAt": "Jan 22 - 6 min read",
+      "thumbnail": "https://miro.medium.com/v2/resize:fit:1200/1*FJvCYBw0eF8COerUSM5Z4A.png",
+      "category": "coding",
+      "authorUid": "aDRfP8j9XYz5wMwDqO2fHt0a1wLn"
+    },
+    {
+      "id": 5,
+      "title": "Getting Started with Cryptocurrency in 2024",
+      "createdAt": "Jan 25 - 7 min read",
+      "thumbnail": "https://www.coindesk.com/resizer/KN_RjtUVQw3s1w8uY95ZsdmFDd0=/800x800/center/middle/cloudfront-us-east-1.images.arcpublishing.com/coindesk/ZN2YVEXD7TGVZONAI73A7USKFY.jpg",
+      "category": "trading",
+      "authorUid": "DWLnH3o27OUFhwvcoLEYXTG8Qsk2"
+    }
+  ]
+}
