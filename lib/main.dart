@@ -1,3 +1,4 @@
+import 'package:a_learning2/components/appBarComponent.dart';
 import 'package:a_learning2/screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
-      theme: ThemeData(
-
+      home: Scaffold(
+        appBar: Appbarcomponent(),
+        body: Home(),
       ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Poppins', useMaterial3: true),
     );
   }
 }
