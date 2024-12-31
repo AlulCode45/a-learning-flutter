@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "669642682885",
+    "firebase_url": "https://acourse-cd669-default-rtdb.firebaseio.com",
+    "project_id": "acourse-cd669",
+    "storage_bucket": "acourse-cd669.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669642682885:android:fdce1fdbc698d2614ca26c",
+        "android_client_info": {
+          "package_name": "com.acode.acourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669642682885-pn148j1f6pd0vbs6q7fhlhegc50l6dom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoXGg11mghRGnO4bCyXCL2QwZAj6VN6ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669642682885-pn148j1f6pd0vbs6q7fhlhegc50l6dom.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "669642682885-o7gtd5fn0khg8v8hr6v207h48doats3u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todois"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669642682885:android:108ef6553011e4d64ca26c",
+        "android_client_info": {
+          "package_name": "com.acode.alearnin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669642682885-pn148j1f6pd0vbs6q7fhlhegc50l6dom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoXGg11mghRGnO4bCyXCL2QwZAj6VN6ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669642682885-pn148j1f6pd0vbs6q7fhlhegc50l6dom.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "669642682885-o7gtd5fn0khg8v8hr6v207h48doats3u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.todois"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
