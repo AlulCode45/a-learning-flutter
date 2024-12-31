@@ -2,14 +2,19 @@ import 'package:flutter/material.dart';
 
 class Articlelist extends StatelessWidget {
   final String title;
-  final String createdAt;
   final String? thumbnail;
+  final String createdAt;
+  final String category;
+  final String author;
 
-  const Articlelist(
-      {super.key,
-      required this.title,
-      required this.createdAt,
-      this.thumbnail});
+  const Articlelist({
+    super.key,
+    required this.title,
+    required this.createdAt,
+    this.thumbnail,
+    required this.category,
+    required this.author,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +72,7 @@ class Articlelist extends StatelessWidget {
                       color: Colors.red,
                     ),
                     child: Text(
-                      '#coding',
+                      '#$category',
                       style: TextStyle(color: Colors.white, fontSize: 13),
                     ),
                   ),
@@ -78,7 +83,7 @@ class Articlelist extends StatelessWidget {
                       color: Colors.blue,
                     ),
                     child: Text(
-                      '@acode',
+                      '@$author',
                       style: TextStyle(color: Colors.white, fontSize: 13),
                     ),
                   ),
