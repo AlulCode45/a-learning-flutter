@@ -1,4 +1,5 @@
 import 'package:a_learning2/components/appBarComponent.dart';
+import 'package:a_learning2/components/drawerComponent.dart';
 import 'package:a_learning2/screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: Appbarcomponent(),
         body: Home(),
+        drawer: Drawercomponent()
       ),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins', useMaterial3: true),

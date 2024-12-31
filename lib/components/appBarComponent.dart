@@ -7,13 +7,20 @@ class Appbarcomponent extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading:
-      HugeIcon(icon: HugeIcons.strokeRoundedMenu02, color: Colors.black),
+      leading: Builder(
+        builder: (context) {
+          return GestureDetector(
+            onTap: Scaffold.of(context).openDrawer,
+            child: HugeIcon(
+                icon: HugeIcons.strokeRoundedMenu02, color: Colors.black),
+          );
+        },
+      ),
       actions: [
         Padding(
           padding: EdgeInsets.only(right: 20),
           child: CircleAvatar(
-            backgroundImage: AssetImage('assets/images/profile.jpeg'),
+            backgroundImage: AssetImage('assets/images/profile.jpg'),
           ),
         )
       ],
