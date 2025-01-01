@@ -53,11 +53,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBoXGg11mghRGnO4bCyXCL2QwZAj6VN6ZY',
-    appId: '1:669642682885:android:108ef6553011e4d64ca26c',
-    messagingSenderId: '669642682885',
-    projectId: 'acourse-cd669',
-    databaseURL: 'https://acourse-cd669-default-rtdb.firebaseio.com',
-    storageBucket: 'acourse-cd669.firebasestorage.app',
+    apiKey: 'AIzaSyACxcu_-WVF6inMn1VHUVJ8iM0zLi3eX6Y',
+    appId: '1:1022990031465:android:e0c289ef7202fb23f3a0f8',
+    messagingSenderId: '1022990031465',
+    projectId: 'acourse-e51d2',
+    databaseURL: 'https://acourse-e51d2-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'acourse-e51d2.firebasestorage.app',
   );
 }
