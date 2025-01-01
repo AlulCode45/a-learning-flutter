@@ -25,32 +25,34 @@ class _HomeState extends State<Home> {
   }
 
   Future<List<Map<String, dynamic>>> _getArticlesData() async {
-    final articlesSnapshot = await _articlesSnapshot;
-    final articles = articlesSnapshot.value as Map<dynamic, dynamic>;
+    try {
+      final contentsSnapshot = await _articlesSnapshot;
 
-    // Ambil data artikel dan user info berdasarkan authorUid
-    List<Map<String, dynamic>> articlesList = [];
-
-    for (var article in articles.values) {
-      final authorUid = article['authorUid'];
-      final userSnapshot = await dbService.getUserData(authorUid);
-      final userData = userSnapshot.value != null
-          ? (userSnapshot.value as Map<dynamic, dynamic>).values.first
-          : null;
-
-      if (userData != null) {
-        articlesList.add({
-          'id': article['id'],
-          'title': article['title'],
-          'createdAt': article['createdAt'],
-          'thumbnail': article['thumbnail'],
-          'category': article['category'],
-          'author': userData['displayName'],
-        });
+      if (contentsSnapshot.value == null) {
+        print("No contents found");
+        return [];
       }
-    }
 
-    return articlesList;
+      final data = contentsSnapshot.value;
+
+      if (data is List) {
+        print("Data is a List: $data");
+
+        List<Map<String, dynamic>> contentsList = data
+            .where((item) => item is Map) // Validasi tipe elemen
+            .map((item) => Map<String, dynamic>.from(item as Map))
+            .toList();
+
+        print("Contents List: $contentsList");
+        return contentsList;
+      } else {
+        print("Unexpected data structure: ${data.runtimeType}");
+        return [];
+      }
+    } catch (e) {
+      print('Error fetching contents: $e');
+      return [];
+    }
   }
 
   @override
@@ -80,12 +82,21 @@ class _HomeState extends State<Home> {
                     itemCount: articles.length,
                     itemBuilder: (context, index) {
                       final article = articles[index];
+
+                      // Pastikan setiap properti memiliki nilai default jika tidak ada
+                      final title = article['title'] ?? 'No title';
+                      final thumbnail = article['thumbnail'] ??
+                          'https://via.placeholder.com/150';
+                      final author = article['author'] ?? 'Unknown author';
+                      final category = article['category'] ?? 'Uncategorized';
+                      final createdAt = article['createdAt'] ?? 'Unknown date';
+
                       return Articlelist(
-                        title: article['title']!,
-                        thumbnail: article['thumbnail']!,
-                        author: article['author']!,
-                        category: article['category']!,
-                        createdAt: article['createdAt']!,
+                        title: title,
+                        thumbnail: thumbnail,
+                        author: author,
+                        category: category,
+                        createdAt: createdAt,
                       );
                     },
                   );
