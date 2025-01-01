@@ -1,5 +1,6 @@
 import 'package:a_learning2/components/appBarComponent.dart';
 import 'package:a_learning2/components/drawerComponent.dart';
+import 'package:a_learning2/screens/articles/detailArticle.dart';
 import 'package:a_learning2/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
         body: Home(),
         drawer: Drawercomponent(),
       ),
+      routes: {
+        '/detail': (BuildContext context) {return Detailarticle();}
+      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins', useMaterial3: true),
     );

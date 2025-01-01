@@ -1,6 +1,6 @@
 import 'package:a_learning2/components/articleList.dart';
 import 'package:a_learning2/components/searchForm.dart';
-import 'package:a_learning2/services/databaseService.dart';
+import 'package:a_learning2/domains/services/databaseService.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
@@ -36,14 +36,11 @@ class _HomeState extends State<Home> {
       final data = contentsSnapshot.value;
 
       if (data is List) {
-        print("Data is a List: $data");
-
         List<Map<String, dynamic>> contentsList = data
             .where((item) => item is Map) // Validasi tipe elemen
             .map((item) => Map<String, dynamic>.from(item as Map))
             .toList();
 
-        print("Contents List: $contentsList");
         return contentsList;
       } else {
         print("Unexpected data structure: ${data.runtimeType}");
@@ -91,12 +88,15 @@ class _HomeState extends State<Home> {
                       final category = article['category'] ?? 'Uncategorized';
                       final createdAt = article['createdAt'] ?? 'Unknown date';
 
-                      return Articlelist(
-                        title: title,
-                        thumbnail: thumbnail,
-                        author: author,
-                        category: category,
-                        createdAt: createdAt,
+                      return GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/detail'),
+                        child: Articlelist(
+                          title: title,
+                          thumbnail: thumbnail,
+                          author: author,
+                          category: category,
+                          createdAt: createdAt,
+                        ),
                       );
                     },
                   );
